@@ -84,7 +84,7 @@ At local machine (10.10.10.116)
 
 ### Secure Copy
 
-[anup@localhost ~]$ scp ./file_name.c anup@192.168.122.137:~/
+[anup@localhost -]$ scp ./file_name.c anup@192.168.122.137:~/
 
 SFTP (SSH File Transfer Protocol)
 
