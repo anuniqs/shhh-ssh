@@ -1,3 +1,7 @@
+1. [SSH On CentOS Or RedHat —](#SSH-On-CentOS-Or-RedHat-—)
+1. [SSH On Ubuntu —](#SSH-On-Ubuntu-—)
+
+## SSH On CentOS Or RedHat
 
 ### Install OpenSSH Server Software Package
 
@@ -140,6 +144,8 @@ Connected to 192.168.122.137.
 sftp>
 
 To get back to normal, rollback the changes.
+
+## SSH On Ubuntu
 
 <hr />
 
