@@ -197,6 +197,27 @@ anup@Megatron:~$ sudo systemctl restart ssh
 anup@Megatron:~$ ssh root@10.10.10.116
 
 
+### SSH Key-Pair Authentication
+
+At remote machine (192.168.122.137)
+
+anup@ubuntu:~$ ssh-keygen -t rsa
+
+anup@ubuntu:~$ mv ~/.ssh/id_rsa.pub ~/.ssh/authorized_keys
+
+anup@ubuntu:~$ chmod 600 ~/.ssh/authorized_keys
+
+At local machine (10.10.10.116)
+
+anup@anup-Lenovo-G50-70:~$ mkdir ~/.ssh
+
+anup@anup-Lenovo-G50-70:~$ chmod 700 ~/.ssh
+
+anup@anup-Lenovo-G50-70:~$ scp anup@192.168.122.137:/home/anup/.ssh/id_rsa ~/.ssh/
+
+anup@anup-Lenovo-G50-70:~$ ssh anup@192.168.122.137
+
+
 ### Secure Copy
 
 anup@anup-Lenovo-G50-70:~$ scp ./57_1_star.c anup@192.168.122.137:~/
@@ -221,27 +242,6 @@ Download from remote
 sftp> get two.txt
 
 To come out from sftp type "exit" and pres enter
-
-
-### SSH Key-Pair Authentication
-
-At remote machine (192.168.122.137)
-
-anup@ubuntu:~$ ssh-keygen -t rsa
-
-anup@ubuntu:~$ mv ~/.ssh/id_rsa.pub ~/.ssh/authorized_keys
-
-anup@ubuntu:~$ chmod 600 ~/.ssh/authorized_keys
-
-At local machine (10.10.10.116)
-
-anup@anup-Lenovo-G50-70:~$ mkdir ~/.ssh
-
-anup@anup-Lenovo-G50-70:~$ chmod 700 ~/.ssh
-
-anup@anup-Lenovo-G50-70:~$ scp anup@192.168.122.137:/home/anup/.ssh/id_rsa ~/.ssh/
-
-anup@anup-Lenovo-G50-70:~$ ssh anup@192.168.122.137
 
 
 ### SFTP Only
