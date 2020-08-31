@@ -30,7 +30,7 @@
 
 ### Enable or Diasble OpenSSH Service
 
-Enable SSH to start automatically after each system reboot by using the systemctl command:
+Enable SSH to start automatically after each system reboot by using the systemctl command :
 
 [anup@localhost ~]$ sudo systemctl enable sshd
 
@@ -46,11 +46,11 @@ Enable SSH to start automatically after each system reboot by using the systemct
 
 ### ROOT SSH Connection
 
-Edit Configuration file
+__Edit Configuration file__
 
 [anup@localhost ~]$ sudo nano /etc/ssh/sshd_config
 
-And set
+__And set__
 
 PermitRootLogin yes
 
@@ -63,7 +63,7 @@ Then restart ssh
 
 ### SSH Key-Pair Authentication
 
-At remote machine (192.168.122.137)
+__At remote machine (192.168.122.137)__
 
 [anup@localhost ~]$ ssh-keygen -t rsa
 
@@ -71,7 +71,7 @@ At remote machine (192.168.122.137)
 
 [anup@localhost ~]$ chmod 600 ~/.ssh/authorized_keys
 
-At local machine (10.10.10.116)
+__At local machine (10.10.10.116)__
 
 [anup@localhost ~]$ mkdir ~/.ssh
 
