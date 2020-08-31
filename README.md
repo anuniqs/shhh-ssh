@@ -220,7 +220,7 @@ anup@anup-Lenovo-G50-70:~$ ssh anup@192.168.122.137
 
 ### Secure Copy
 
-anup@anup-Lenovo-G50-70:~# scp ./57_1_star.c anup@192.168.122.137:~/
+anup@anup-Lenovo-G50-70: $ scp ./57_1_star.c anup@192.168.122.137:~/
 
 
 __SFTP (SSH File Transfer Protocol)__
