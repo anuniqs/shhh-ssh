@@ -54,7 +54,7 @@ __And set__
 
 PermitRootLogin yes
 
-Then restart ssh
+__Then restart ssh__
 
 [anup@localhost ~]$ sudo systemctl restart sshd
 
@@ -86,7 +86,7 @@ __At local machine (10.10.10.116)__
 
 [anup@localhost -]$ scp ./file_name.c anup@192.168.122.137:~/
 
-SFTP (SSH File Transfer Protocol)
+__SFTP (SSH File Transfer Protocol)__
 
 SFTP server function is enabled by default, but if not, enable it to add the line [Subsystem sftp /usr/lib/openssh/sftp-server] in [/etc/ssh/sshd_config].
 
@@ -96,11 +96,11 @@ anup@192.168.122.137's password:
 Connected to 192.168.122.137.
 sftp>
 
-Upload to remote
+__Upload to remote__
 
 sftp> put one.txt
 
-Download from remote
+__Download from remote__
 
 sftp> get two.txt
 
@@ -109,7 +109,7 @@ To come out from sftp type "exit" and pres enter
 
 ### SFTP Only
 
-At remote macine
+__At remote macine__
 
 [anup@localhost ~]$ sudo groupadd sftp_users
 
@@ -117,13 +117,13 @@ At remote macine
 
 [anup@localhost ~]$ sudo nano /etc/ssh/sshd_config
 
-comment out and add a line like below
+__comment out and add a line like below__
 
 Subsystem sftp /usr/lib/openssh/sftp-server
 
 Subsystem sftp internal-sftp
 
-add to the end
+__add to the end__
 
 Match Group sftp_users
 X11Forwarding no
@@ -133,7 +133,7 @@ ForceCommand internal-sftp
 
 [anup@localhost ~]$ sudo systemctl restart ssh
 
-Test
+__Test__
 
 [anup@localhost ~]$ ssh anup@192.168.122.137
 This service allows sftp connections only.
@@ -186,11 +186,11 @@ anup@Megatron:~$ ssh anup@10.10.10.116
 Edit Configuration file
 anup@Megatron:~$ sudo nano /etc/ssh/sshd_config
 
-And set
+__And set__
 
 PermitRootLogin yes
 
-Then restart ssh
+__Then restart ssh__
 
 anup@Megatron:~$ sudo systemctl restart ssh
 
@@ -199,7 +199,7 @@ anup@Megatron:~$ ssh root@10.10.10.116
 
 ### SSH Key-Pair Authentication
 
-At remote machine (192.168.122.137)
+__At remote machine (192.168.122.137)__
 
 anup@ubuntu:~$ ssh-keygen -t rsa
 
@@ -207,7 +207,7 @@ anup@ubuntu:~$ mv ~/.ssh/id_rsa.pub ~/.ssh/authorized_keys
 
 anup@ubuntu:~$ chmod 600 ~/.ssh/authorized_keys
 
-At local machine (10.10.10.116)
+__At local machine (10.10.10.116)__
 
 anup@anup-Lenovo-G50-70:~$ mkdir ~/.ssh
 
@@ -223,7 +223,7 @@ anup@anup-Lenovo-G50-70:~$ ssh anup@192.168.122.137
 anup@anup-Lenovo-G50-70:~$ scp ./57_1_star.c anup@192.168.122.137:~/
 
 
-SFTP (SSH File Transfer Protocol)
+__SFTP (SSH File Transfer Protocol)__
 
 SFTP server function is enabled by default, but if not, enable it to add the line [Subsystem sftp /usr/lib/openssh/sftp-server] in [/etc/ssh/sshd_config].
 
@@ -233,11 +233,11 @@ anup@192.168.122.137's password:
 Connected to 192.168.122.137.
 sftp>
 
-Upload to remote
+__Upload to remote__
 
 sftp> put one.txt
 
-Download from remote
+__Download from remote__
 
 sftp> get two.txt
 
@@ -246,7 +246,7 @@ To come out from sftp type "exit" and pres enter
 
 ### SFTP Only
 
-At remote macine
+__At remote macine__
 
 anup@ubuntu:~$ sudo groupadd sftp_users
 
@@ -254,13 +254,13 @@ anup@ubuntu:~$ sudo usermod -G sftp_users anup
 
 anup@ubuntu:~$ sudo nano /etc/ssh/sshd_config
 
-comment out and add a line like below
+__comment out and add a line like below__
 
 Subsystem sftp /usr/lib/openssh/sftp-server
 
 Subsystem sftp internal-sftp
 
-add to the end
+__add to the end__
 
 Match Group sftp_users
 X11Forwarding no
@@ -270,7 +270,7 @@ ForceCommand internal-sftp
 
 anup@ubuntu:~$ sudo systemctl restart ssh
 
-Test
+__Test__
 
 anup@anup-Lenovo-G50-70:~$ ssh anup@192.168.122.137
 This service allows sftp connections only.
