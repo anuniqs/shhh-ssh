@@ -280,7 +280,10 @@ anup@anup-Lenovo-G50-70:~$ sftp anup@192.168.122.137
 Connected to 192.168.122.137.
 sftp>
 
-To get back to normal, rollback the changes.
+To get back to normal, rollback the changes.  
+
+__For more details :__ https://www.ssh.com/ssh/
+
 
 <hr />
 
