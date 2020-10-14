@@ -283,8 +283,3 @@ sftp>
 To get back to normal, rollback the changes.  
 
 __For more details :__ https://www.ssh.com/ssh/
-
-
-<hr />
-
-`@ Anup Kumar Mondal, AnuRish Brand Corp. , +91-9620481097 , uniqs.anup@gmail.com , https://www.linkedin.com/in/anuniqs/`
